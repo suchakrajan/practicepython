@@ -1,0 +1,27 @@
+""" This is TASk 1 from http://www.practicepython.org/"""
+
+import datetime
+today_year = int(datetime.date.today().year)
+
+name = input("Please enter Your name = ")
+age = int(input("Please enter your age = "))
+yr = int(today_year + (100 - age))
+num = int(input("Enter a number between 1 to 10 = "))
+if age >= 100:
+    print("You have corssed 100 years" * num)
+else:
+    print("Hello ",name,", You will turn 100 years old in ",yr,"\n" * num)
+    x = ("\nHello " + name + ", You will turn 100 years old in " + str(yr))
+    print(x * num)
+    
+"""
+
+#Answer from Discussion
+name = input("Please enter your name: ")
+age = int(input("Please enter your age: "))
+times = int(input("Please enter a number: "))
+
+statement = ("\nThe year " + name + " turns 100 years old is " + str(2015-age+100))
+
+print (statement * times)
+"""
