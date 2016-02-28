@@ -1,0 +1,46 @@
+#!/usr/bin/python
+
+"""
+practicepython.org Task_9
+"""
+
+import random
+MAXNO = 20
+rannum = random.randint(1, MAXNO)
+
+name = input('Enter Your Name: ')
+#print(name)
+print('\nHello '+ name +', This is a Game to Guess the Number.\n')
+
+print('\nYou have 5 tries to guess the number\n')
+n = 0
+while True:
+    
+    number = input('Please guess a number between 1 and ' + str(MAXNO) + ': ')
+    
+    if number == ' ':
+        print('\nPlease enter a valid number.')
+        continue
+    else:
+        n += 1
+        if n == 5:
+            print('Ooops, no more tries remained. Btw the Number was ' + str(rannum) + '.')
+            break
+        try:
+            number = int(number)
+        except ValueError:
+            print("Enter a Valid Number")
+            n -= 1
+            continue
+        if number < rannum:
+            print('\nYour guess is too Low, plese guess a Higher value.\n')
+            continue
+        elif number > rannum:
+            print('\nYour guess is too High, please guess a Lower value.\n')
+            continue
+        else:
+            print('\nWow, you guessed it correctly, Congratulations!!!')
+            break
+            
+        
+print("You tried "+ str(n) + " times")
