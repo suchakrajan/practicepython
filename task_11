@@ -1,0 +1,19 @@
+import math
+
+def argument(text):
+    return int(input(text + " : "))
+def prime(num):
+    sqrrt=int(math.sqrt(num))
+    for i in range(2,sqrrt+1):
+        if num%i==0:
+            x=0
+            break
+        else:
+            x=1
+    return(x)
+NUM = argument("Enter a number to check if it is prime number")    
+y = prime(NUM)
+if y == 0:
+    print("NUMBER IS not PRIME")
+elif y == 1:
+    print("number is  PRIME")
